@@ -27,6 +27,26 @@
         width: 80vw;
         height: 80vh;
       }
+
+      .custom-ar-button {
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        width: 150px;
+        height: 150px;
+        background-color: white;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .custom-ar-button svg {
+        width: 100px;
+        height: 100px;
+      }
     </style>
   </head>
   <body>
@@ -38,6 +58,12 @@
       camera-controls
       ar
       alt="サンプル"
-    ></model-viewer>
+    >
+      <button slot="ar-button" class="custom-ar-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M3 3h6v2H5v4H3V3zm12 0h6v6h-2V5h-4V3zm6 12v6h-6v-2h4v-4h2zM5 19v-4H3v6h6v-2H5zm7-14l5 3v6l-5 3-5-3V8l5-3z"/>
+        </svg>
+      </button>
+    </model-viewer>
   </body>
 </html>
