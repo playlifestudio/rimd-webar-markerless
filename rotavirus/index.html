@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Import the component -->
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+
+    <meta charset="UTF-8" />
+    <title>model-viewer demo</title>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #222;
+      }
+
+      model-viewer {
+        width: 80vw;
+        height: 80vh;
+      }
+
+      .custom-ar-button {
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        width: 150px;
+        height: 150px;
+        background-color: white;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .custom-ar-button img {
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <model-viewer
+      preload
+      src="/rotavirus/model.glb"
+      ios-src="/rotavirus/model.usdz"
+      auto-rotate
+      camera-controls
+      ar
+      alt="ロタウイルス"
+    >
+      <button slot="ar-button" class="custom-ar-button">
+        <img src="/button_icon/camera_icon.png" alt="AR">
+      </button>
+    </model-viewer>
+  </body>
+</html>
