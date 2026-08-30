@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RIMD WebAR モデル一覧</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: #222;
+        color: #eee;
+        font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+          "Hiragino Kaku Gothic ProN", sans-serif;
+        padding: 32px 16px 64px;
+      }
+      h1 {
+        font-size: 1.4rem;
+        text-align: center;
+        font-weight: 600;
+      }
+      h2 {
+        font-size: 1.05rem;
+        border-bottom: 1px solid #444;
+        padding-bottom: 8px;
+        margin-top: 40px;
+        font-weight: 600;
+      }
+      .wrap {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 12px;
+      }
+      a.card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 64px;
+        background-color: #333;
+        color: #eee;
+        text-decoration: none;
+        padding: 16px 12px;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 0.95rem;
+        line-height: 1.4;
+        transition: background-color 0.15s;
+      }
+      a.card:hover {
+        background-color: #4a4a4a;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>RIMD WebAR モデル一覧</h1>
+    <div class="wrap">
+      <h2>新規追加モデル（AR追加 / DEV-018）</h2>
+      <div class="grid">
+        <a class="card" href="/bacteriophage/">バクテリオファージ</a>
+        <a class="card" href="/rotavirus/">ロタウイルス</a>
+        <a class="card" href="/lymphocyte/">リンパ球<br />（T細胞・B細胞）</a>
+        <a class="card" href="/neutrophil/">好中球</a>
+        <a class="card" href="/dendritic-cell/">樹状細胞</a>
+        <a class="card" href="/toxoplasma/">トキソプラズマ</a>
+      </div>
+
+      <h2>既存モデル</h2>
+      <div class="grid">
+        <a class="card" href="/coronavirus/">コロナウイルス</a>
+        <a class="card" href="/influenza/">インフルエンザ</a>
+        <a class="card" href="/norovirus/">ノロウイルス</a>
+        <a class="card" href="/measles/">麻疹（はしか）</a>
+        <a class="card" href="/chickenpox/">水痘（みずぼうそう）</a>
+        <a class="card" href="/pertussis/">百日咳</a>
+        <a class="card" href="/ebola/">エボラウイルス</a>
+        <a class="card" href="/lassa/">ラッサウイルス</a>
+        <a class="card" href="/malaria/">マラリア</a>
+        <a class="card" href="/encephalitis/">脳炎</a>
+      </div>
+    </div>
+  </body>
+</html>

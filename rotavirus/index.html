@@ -1,18 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
   <head>
-    <!-- Import the component -->
     <script
       type="module"
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
     ></script>
 
     <meta charset="UTF-8" />
-    <title>model-viewer demo</title>
-    <script
-      type="module"
-      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
-    ></script>
+    <title>ロタウイルス</title>
     <style>
       body {
         margin: 0;
@@ -26,6 +21,24 @@
       model-viewer {
         width: 80vw;
         height: 80vh;
+      }
+
+      .hint-text {
+        position: absolute;
+        top: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #ddd;
+        font-size: 13px;
+        font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+          "Hiragino Kaku Gothic ProN", sans-serif;
+        background: rgba(0, 0, 0, 0.55);
+        padding: 8px 14px;
+        border-radius: 4px;
+        pointer-events: none;
+        text-align: center;
+        max-width: 90vw;
+        z-index: 10;
       }
 
       .custom-ar-button {
@@ -50,6 +63,9 @@
     </style>
   </head>
   <body>
+    <div class="hint-text">
+      ARで表示後、ピンチで拡大・縮小、タップで再配置できます
+    </div>
     <model-viewer
       preload
       src="/rotavirus/model.glb"
@@ -57,6 +73,7 @@
       auto-rotate
       camera-controls
       ar
+      ar-modes="scene-viewer webxr quick-look"
       alt="ロタウイルス"
     >
       <button slot="ar-button" class="custom-ar-button">
